@@ -1,0 +1,9 @@
+{
+    "max_tokens":25372,
+    "max_sequence_length":8,
+    "step_size":3,
+    "batch_size":512,
+    "lstm_units":64,
+    "learning_rate":0.001,
+    "embedding_dim":64
+}
