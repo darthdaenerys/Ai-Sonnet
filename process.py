@@ -39,3 +39,14 @@ def ids2sequences(ids):
     decode=re.sub(' , ',', ',decode)
     decode=re.sub(' . ','. ',decode)
     return decode
+
+def softmax(z):
+    return np.exp(z)/sum(np.exp(z))
+
+def sample(conditional_probability,temperature=1.0):
+    conditional_probability = np.asarray(conditional_probability).astype("float64")
+    conditional_probability = np.log(conditional_probability) / temperature
+    reweighted_conditional_probability = softmax(conditional_probability)
+    probas = np.random.multinomial(1, reweighted_conditional_probability, 1)
+    return np.argmax(probas)
+
