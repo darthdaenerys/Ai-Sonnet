@@ -19,3 +19,36 @@ body {
     font-weight: 500;
     font-style: normal;
 }
+
+.logo {
+    height: 5rem;
+    width: 5rem;
+    display: inline-block;
+    margin-left: 3rem;
+    border-radius: 5rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+nav {
+    box-shadow: 0rem .2rem 1rem #000000a2;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+}
+
+.nav-container {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: rgb(82, 9, 24);
+    align-items: center;
+}
+
+.nav-container h1 {
+    font-size: 4rem;
+    color: white;
+    margin: 0rem auto;
+    text-align: center;
+}
