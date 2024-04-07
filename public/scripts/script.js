@@ -15,3 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         temperatureLabel.textContent = temperature.value;
     });
 });
+
+function isScrolledToBottom() {
+    return window.innerHeight + window.scrollY >= document.body.scrollHeight - 20;
+}
