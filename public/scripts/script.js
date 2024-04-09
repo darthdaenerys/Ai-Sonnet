@@ -28,3 +28,19 @@ function updateUI(data) {
         window.scrollTo(0, document.body.scrollHeight);
     }
 }
+
+function generate() {
+    sonnet.innerHTML = '<span class="cursor">|</span>';
+    cursor = document.querySelector('.cursor');
+    cursor.style.display = 'inline-block';
+    fetch('/generate', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ initialSeed: initialSeed.value, temperature: temperature.value, steps: steps.value }),
+    })
+        .catch(error => {
+            console.log('Error: ', error);
+        })
+}
