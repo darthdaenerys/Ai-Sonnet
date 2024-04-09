@@ -19,3 +19,12 @@ document.addEventListener('DOMContentLoaded', function () {
 function isScrolledToBottom() {
     return window.innerHeight + window.scrollY >= document.body.scrollHeight - 20;
 }
+
+function updateUI(data) {
+    data = data.replace(/\n/g, '<br>');
+    cursor.insertAdjacentHTML('beforebegin', data);
+
+    if (isScrolledToBottom) {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+}
