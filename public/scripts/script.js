@@ -44,3 +44,8 @@ function generate() {
             console.log('Error: ', error);
         })
 }
+
+socket.on('contentUpdate', (data) => {
+    // console.log('recieved chunk: ', data);
+    updateUI(data);
+});
