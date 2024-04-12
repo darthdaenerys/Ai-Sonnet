@@ -49,3 +49,9 @@ socket.on('contentUpdate', (data) => {
     // console.log('recieved chunk: ', data);
     updateUI(data);
 });
+
+socket.on('stop', () => {
+    setTimeout(() => {
+        cursor.style.display = 'none';
+    }, 500);
+})
