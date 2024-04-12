@@ -52,3 +52,24 @@ nav {
     margin: 0rem auto;
     text-align: center;
 }
+
+#showcase {
+    display: flex;
+    flex-direction: row;
+    padding: 4rem;
+}
+
+.left-container {
+    background-color: rgb(255, 241, 244);
+    min-height: 40rem;
+    width: 70%;
+    margin: 2rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 3rem #0000004f;
+    padding: 1.5rem;
+}
+
+.left-container p {
+    font-size: 1.7rem;
+    display: inline-block;
+}
