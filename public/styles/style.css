@@ -88,3 +88,25 @@ nav {
     position: sticky;
     top: 7rem;
 }
+
+.cursor {
+    display: inline-block;
+    background-color: #000;
+    animation: blink 1s infinite;
+    height: 1.8rem;
+    display: none;
+    width: 1rem;
+    margin-left: 1rem;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
