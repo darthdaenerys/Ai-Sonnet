@@ -127,6 +127,23 @@ nav {
     margin-top: 1rem;
 }
 
+#temperatureLabel h3{
+    font-size: 1.5rem;
+    display: inline-block;
+}
+#temperatureValue{
+    font-size: 2rem;
+}
+input{
+    padding: .6rem;
+    border: .2rem solid rgba(128, 128, 128, 0.582);
+    font-size: 1.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+input[type="number"]{
+    margin-top: -1rem;
+}
 .btn{
     color: white;
     background-color: rgb(82, 9, 24);
