@@ -110,3 +110,19 @@ nav {
         opacity: 1;
     }
 }
+
+#initialSeed {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 1rem;
+    border: .2rem solid rgba(128, 128, 128, 0.582);
+}
+
+#temperatureInput {
+    font-size: 2rem;
+}
+
+#temperatureLabel {
+    margin-top: 1rem;
+}
