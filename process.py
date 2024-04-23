@@ -58,3 +58,12 @@ def generate_sequence(initial_seed,steps,temperature=1.0):
         initial_seed=ids2sequences(idx)
     print(initial_seed,end='',flush=True)
     encoded_seq=sequences2ids(initial_seed)
+    
+    
+    while gen!=steps:
+        gen+=1
+        input_seq=np.zeros((1,max_sequence_length))
+        last_sequence=encoded_seq[len(encoded_seq)-max_sequence_length:]
+        
+        for idx,enc in enumerate(last_sequence):
+            input_seq[:,idx]=enc
