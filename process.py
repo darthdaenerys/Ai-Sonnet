@@ -50,3 +50,11 @@ def sample(conditional_probability,temperature=1.0):
     probas = np.random.multinomial(1, reweighted_conditional_probability, 1)
     return np.argmax(probas)
 
+def generate_sequence(initial_seed,steps,temperature=1.0):
+    gen=0
+    encoded_seq=None
+    if initial_seed=='':
+        idx=random.randint(0,max_tokens-1)
+        initial_seed=ids2sequences(idx)
+    print(initial_seed,end='',flush=True)
+    encoded_seq=sequences2ids(initial_seed)
