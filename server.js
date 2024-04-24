@@ -21,7 +21,13 @@ app.post('/generate', (req, res) => {
 
     const pythonProcess = spawn('python', ['generator.py', initialSeed, temperature, steps]);
 
-});
+
+// io.on('connection', (socket) => {
+//     console.log('User connected');
+//     socket.on('disconnect', () => {
+//         console.log('User disconnected');
+//     })
+// });
 
 server.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
