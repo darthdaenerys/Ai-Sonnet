@@ -70,3 +70,5 @@ def generate_sequence(initial_seed,steps,temperature=1.0):
             
         y_pred=sonnet_model(input_seq,training=False).numpy().flatten()
         y_pred=sample(y_pred,temperature)
+        encoded_seq.append(y_pred)
+        word=id2word[y_pred]
