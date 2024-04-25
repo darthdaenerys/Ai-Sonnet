@@ -67,3 +67,6 @@ def generate_sequence(initial_seed,steps,temperature=1.0):
         
         for idx,enc in enumerate(last_sequence):
             input_seq[:,idx]=enc
+            
+        y_pred=sonnet_model(input_seq,training=False).numpy().flatten()
+        y_pred=sample(y_pred,temperature)
