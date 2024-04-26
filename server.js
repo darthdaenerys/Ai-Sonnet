@@ -21,6 +21,20 @@ app.post('/generate', (req, res) => {
 
     const pythonProcess = spawn('python', ['generator.py', initialSeed, temperature, steps]);
 
+    pythonProcess.stdout.on('data', (chunk) => {
+        const generatedText = chunk.toString();
+        // console.log('Sending chunk:', generatedText);
+
+        io.emit('contentUpdate', generatedText);
+    });
+
+    pythonProcess.stderr.on('data', (data) => {
+        console.error(`Error from Python script: ${data}`);
+    });
+    pythonProcess.on('close', (code) => {
+        io.emit('stop');
+    });
+});
 
 // io.on('connection', (socket) => {
 //     console.log('User connected');
