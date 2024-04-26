@@ -72,3 +72,11 @@ def generate_sequence(initial_seed,steps,temperature=1.0):
         y_pred=sample(y_pred,temperature)
         encoded_seq.append(y_pred)
         word=id2word[y_pred]
+        if word=='<NEXT>':
+            print('\n',end='',flush=True)
+        elif word=='.':
+            print(word,end='',flush=True)
+        elif word==',':
+            print(word,end='',flush=True)
+        else:
+            print(f' {id2word[y_pred]}',end='',flush=True)
