@@ -1,6 +1,6 @@
 # AI Sonnet
 
-![alt text](demo.gif)
+![alt text](images/demo.gif)
 
 The AI Shakespeare Sonnet Generator is a web application that utilizes a deep learning model running on the server to generate Shakespearean-style sonnets. Users can input an initial prompt, specify the temperature for generating text, and set the desired length of the sequence to be generated.
 
@@ -15,6 +15,10 @@ The AI Shakespeare Sonnet Generator is a web application that utilizes a deep le
 ## Dataset
 
 This Model is based on all of Shakespeares Sonnets as its dataset. The book can be found under Project Gutenberg: [Sonnet Collection](https://www.gutenberg.org/ebooks/1041)
+
+## Metrics
+
+![alt text](images/Figure.png)
 
 ## Usage
 
